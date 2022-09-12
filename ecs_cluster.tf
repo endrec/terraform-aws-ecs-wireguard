@@ -15,14 +15,14 @@ resource "aws_iam_instance_profile" "ecs_instance_role" {
 }
 
 // https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-ami-versions.html
-// aws ssm get-parameters --names /aws/service/ecs/optimized-ami/amazon-linux-2/recommended | jq -r .Parameters[0].Value | jq -r .image_id
+// aws ssm get-parameters --names /aws/service/ecs/optimized-ami/amazon-linux-2022/recommended | jq -r .Parameters[0].Value | jq -r .image_id
 data "aws_ami" "vpn" {
   most_recent = true
   owners      = ["amazon"]
 
   filter {
     name   = "name"
-    values = ["amzn2-ami-ecs-hvm-*-x86_64-ebs"]
+    values = ["al2022-ami-ecs-hvm-*-x86_64-ebs"]
   }
 }
 
