@@ -21,7 +21,7 @@ resource "aws_ecs_task_definition" "wireguard" {
           Value = var.server_tz
         },
         {
-          Name  = "SERVER_URL"
+          Name  = "SERVERURL"
           Value = var.server_url
         },
         {
