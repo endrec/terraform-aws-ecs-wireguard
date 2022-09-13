@@ -19,8 +19,8 @@ echo "* $(date)" >> /var/log/startup.log 2>&1
 # Update YUM
 yum -y update >> /var/log/startup.log 2>&1
 # Install ECS
-amazon-linux-extras disable docker >> /var/log/startup.log 2>&1
-amazon-linux-extras install -y ecs >> /var/log/startup.log 2>&1
+#amazon-linux-extras disable docker >> /var/log/startup.log 2>&1
+#amazon-linux-extras install -y ecs >> /var/log/startup.log 2>&1
 # Update ECS config
 mkdir -p /etc/ecs
 echo 'ECS_CLUSTER=${ecs_cluster}' >> /etc/ecs/ecs.config
