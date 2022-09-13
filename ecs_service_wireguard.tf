@@ -3,7 +3,7 @@ resource "aws_ecs_task_definition" "wireguard" {
   container_definitions = jsonencode([
     {
       name      = var.name
-      image     = "linuxserver/wireguard:v1.0.20210424-ls36"
+      image     = "linuxserver/wireguard:v1.0.20210914"
       cpu       = 1
       memory    = 512
       essential = true
