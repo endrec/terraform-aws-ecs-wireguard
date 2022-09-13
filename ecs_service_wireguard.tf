@@ -25,7 +25,7 @@ resource "aws_ecs_task_definition" "wireguard" {
           Value = var.server_url
         },
         {
-          Name  = "SERVER_PORT"
+          Name  = "SERVERPORT"
           Value = tostring(local.PORT_WIREGUARD)
         },
         {
